@@ -1,40 +1,65 @@
-# Open-Source-Software-Course-Project
-**STUDENT DETAILS**
+# The Open Source Audit: Python & Linux Automation
+**Capstone Project for Open Source Software (OSS)**
 
-Arnima Awasthi 
+## Student Information
+* **Student Name:** Arnima Awasthi
+* **Registration Number:** 24BA110813
+* **Chosen Software :** Python
 
-Registration Number: 24BA110813 
+## Project Description
+This project is a comprehensive audit of **Python** as an open-source software. It explores the evolution of Python from its inception by Guido van Rossum to its current role as a cornerstone of modern AI and Data Science. The project covers technical aspects including the **PSF License**, comparison with proprietary alternatives, and practical Linux system administration using shell scripting.
 
-Chosen Software : Python
+---
 
-__Project Overview__
-This project is a capstone report for the Open Source Software (OSS) course. It explores the history and practical applications of Python within the open-source ecosystem. The audit includes a deep dive into the Python Software Foundation License (PSFL), comparison with proprietary software like MATLAB, and an investigation into Python's footprint on Linux systems.
+## Script Descriptions
+This repository contains five automation scripts designed for a Linux environment:
 
-__Key Components__
+1.  **System Identity Report**: Displays the current Linux kernel version, active user, and system uptime.
+2.  **FOSS Package Inspector**: Uses `dpkg` and `grep` to verify the installation of specific open-source packages (like Python) and extract their metadata.
+3.  **Disk & Permission Auditor**: Automatically inspects critical system directories (like `/etc` and `/var/log`) to check for disk usage and file permissions.
+4.  **Log File Analyzer**: A diagnostic tool that reads log files line-by-line to count occurrences of the keyword "error."
+5.  **Open Source Manifesto Generator**: An interactive script that captures developer input on software freedom and exports a formatted manifesto to a `.txt` file.
 
-OSS Analysis: A in-depth look at Python's origin, starting with Guido van Rossum in 1989 , and its evolution into a foundation for AI and Data Science.
+---
 
-Linux Integration: Documentation on installing and managing Python using the apt package manager and auditing the Linux filesystem hierarchy.
+## Prerequisites & Dependencies
+To run these scripts, you will need:
+* **Operating System:** Linux (Ubuntu/Debian recommended) or WSL (Windows Subsystem for Linux).
+* **Shell:** Bash (standard in most Linux distributions).
+* **Dependencies:** * `python3` (for the audit context).
+    * `dpkg` (pre-installed on Debian-based systems).
+    * Standard GNU utilities (`grep`, `chmod`, `awk`).
 
-Security & Permissions: Investigation of system processes, memory usage, and file permissions (e.g., /usr/bin/python3) to ensure administrative transparency.
+---
 
-FOSS Ecosystem: Analysis of how Python interacts with other open-source tools like the GNU C Library (glibc), OpenSSL, and the LAMP stack.
+## Instructions to Run the Scripts
 
-__Automation Scripts__
-The project includes five specialized shell scripts demonstrating Linux automation:
+Follow these steps exactly to execute the scripts on your Linux terminal:
 
-System Identity Report: Displays kernel version, user, and system uptime.
+### 1. Grant Execution Permissions
+By default, Linux may block scripts from running. You must grant permission using `chmod`:
+```bash
+# To grant permission to all scripts at once:
+chmod +x *.sh
 
-FOSS Package Inspector: Uses dpkg and grep to verify software installations and metadata.
+# Or to a specific script:
+chmod +x script1.sh
+2. Execute the Scripts
+Run the scripts using the ./ prefix:
 
-Disk and Permission Auditor: Automates inspection of critical paths like /etc and /var/log.
+For Script 1, 2, 3, and 5:
 
-Log File Analyzer: Scans log files for specific keywords (like "error") using loops and grep.
+Bash
+./script1.sh
+For Script 4 (Log Analyzer):
+This script requires a file path as an argument.
 
-Manifesto Generator: An interactive script that captures developer viewpoints on software freedom and exports them to a text file.
+Bash
+./script4.sh path/to/your/logfile.log
+File Structure
+OSSCapstoneProject_24BAI10813.pdf: Complete technical report.
 
-__Files in this Repository__
-OSSCapstoneProject_24BAI10813.pdf: The full technical audit report.
+script1.sh through script5.sh: Linux automation shell scripts.
 
-scripts/: A folder containing the .sh automation files.
+README.md: Project documentation (this file).
 
